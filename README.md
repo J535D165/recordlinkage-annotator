@@ -12,7 +12,7 @@ The [Github-pages](https://pages.github.com/) hosted version of [Record Linkage 
 data. Not convided about the safety of your data? That's fine. You can 
 deploy the code yourself locally. Please read the local deployment instructions.  
 
-![Review screen of Record Linkage Annotator](images/annotator_review.png)
+[![Review screen of Record Linkage Annotator](images/annotator_review.png)](https://j535d165.github.io/recordlinkage-annotator/)
 
 ## Create input file
 
