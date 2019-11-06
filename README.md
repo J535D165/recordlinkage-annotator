@@ -23,7 +23,7 @@ Version 1 of the schema is open source and can be found [here](/schema). Example
 
 ## Extract results
 
-*RecordLinkage ANNOTATOR* exports the results of the annotation in an annotation file with the same structure as the input annotation file. This makes it simple to review the annotation or continue labeling the data. The [Python Record Linkage Toolkit](https://github.com/J535D165/recordlinkage) can be used to read the annotation file and extract the links and distinct pairs. For more information, see the documention on [Manual Labeling](https://recordlinkage.readthedocs.io/en/latest/annotation.html).
+*RecordLinkage ANNOTATOR* exports the results of the annotation in an annotation file with the same structure as the input annotation file. This makes it simple to review the annotation or continue labeling the data. The [Python Record Linkage Toolkit](https://github.com/J535D165/recordlinkage) can be used to read the annotation file and extract the links and distinct pairs. For more information, see the documentation on [Manual Labeling](https://recordlinkage.readthedocs.io/en/latest/annotation.html).
 
 ## Development
 
