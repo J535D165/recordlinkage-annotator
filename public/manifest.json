@@ -1,6 +1,6 @@
 {
-  "short_name": "Recordlinkage Annotator",
-  "name": "Recordlinkage Annotator - A browser-based application for labelling record pairs",
+  "short_name": "RecordLinkage ANNOTATOR",
+  "name": "RecordLinkage ANNOTATOR - A browser-based user interface for manual labeling of record pairs.",
   "icons": [
     {
       "src": "favicon.ico",

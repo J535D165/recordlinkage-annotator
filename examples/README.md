@@ -1,6 +1,6 @@
 # Example annotation files
 
-This folder contains example files for the RecordLinkage Annotation application. 
+This folder contains example files for the RecordLinkage ANNOTATOR application. 
 
 ## Prisoners book
 
