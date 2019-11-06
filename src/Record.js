@@ -32,7 +32,10 @@ export default function Record(props) {
   return (
 
 	<Card className={classes.paper}>
-    <CardHeader title={props.recordData.identifiers[props.recordSource].record}/>
+    <CardHeader 
+      title={(typeof props.recordData.identifiers[props.recordSource].record !== 'undefined') ? "Record " + props.recordData.identifiers[props.recordSource].record : ""} 
+      subheader={props.recordData.identifiers[props.recordSource].dataset}
+    />
 
     {/* The content of the card. */}
     <CardContent>
