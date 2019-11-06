@@ -59,10 +59,10 @@ export default function App() {
           {isState === 'upload' &&
             <React.Fragment>
               <Typography component="h2" variant="h3" align="center" color="textPrimary" gutterBottom>
-                Record pair labelling for record linkage and data matching
+                Record pair labeling for record linkage and data matching
               </Typography>
               <Typography variant="h5" align="center" color="textSecondary" paragraph>
-                Turn your record pairs into golden record pairs with this intuitive labelling tool. Labelled record pairs are important for training and validation record linkage and data matching processes. <Link href="https://github.com/J535D165/recordlinkage-annotator#create-annotation-file" target="_blank">Create an annotation file</Link> and start labeling your data!
+                Turn your record pairs into golden record pairs with this intuitive labeling tool. Labeled record pairs are important for training and validation record linkage and data matching processes. <Link href="https://github.com/J535D165/recordlinkage-annotator#create-annotation-file" target="_blank">Create an annotation file</Link> and start labeling your data!
               </Typography>
             <ReviewDropzone reviewData={reviewData} reviewState={reviewState}/>
             </React.Fragment>
