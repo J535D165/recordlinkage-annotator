@@ -123,12 +123,12 @@
       ],
       "identifiers": {
         "a": {
-          "dataset": null,
-          "record": 0
+          "dataset": "Prison Book",
+          "record": "p78-l3"
         },
         "b": {
-          "dataset": null,
-          "record": 1
+          "dataset": "Prison Book",
+          "record": "p23-l7"
         }
       }
     },
@@ -254,12 +254,12 @@
       ],
       "identifiers": {
         "a": {
-          "dataset": null,
-          "record": 2
+          "dataset": "Prison Book",
+          "record": "p24-l15"
         },
         "b": {
-          "dataset": null,
-          "record": 3
+          "dataset": "Prison Book",
+          "record": "p165-l1"
         }
       }
     },
@@ -267,235 +267,104 @@
       "fields": [
         {
           "a": {
-            "name": "Station",
-            "value": "Stone St",
-            "type": "String"
-          },
-          "b": {
             "name": "Station",
             "value": "C Lane",
             "type": "String"
           },
+          "b": {
+            "name": "Station",
+            "value": "Stone St",
+            "type": "String"
+          },
           "similarity": null
         },
         {
           "a": {
-            "name": "Prisoner's Name",
-            "value": "Mary Byrne",
-            "type": "String"
-          },
-          "b": {
             "name": "Prisoner's Name",
             "value": "Charlotte Walche",
             "type": "String"
           },
-          "similarity": null
-        },
-        {
-          "a": {
-            "name": "Age",
-            "value": 24,
-            "type": "String"
-          },
           "b": {
-            "name": "Age",
-            "value": 33,
-            "type": "String"
-          },
-          "similarity": null
-        },
-        {
-          "a": {
-            "name": "Occupation",
-            "value": "none",
-            "type": "String"
-          },
-          "b": {
-            "name": "Occupation",
-            "value": "Maried",
-            "type": "String"
-          },
-          "similarity": null
-        },
-        {
-          "a": {
-            "name": "Residence",
-            "value": "none",
-            "type": "String"
-          },
-          "b": {
-            "name": "Residence",
-            "value": "1. Blackpitts",
-            "type": "String"
-          },
-          "similarity": null
-        },
-        {
-          "a": {
-            "name": "Offence",
-            "value": "Larceny boots",
-            "type": "String"
-          },
-          "b": {
-            "name": "Offence",
-            "value": "Larceny clothes",
-            "type": "String"
-          },
-          "similarity": null
-        },
-        {
-          "a": {
-            "name": "Sentence",
-            "value": "7days",
-            "type": "String"
-          },
-          "b": {
-            "name": "Sentence",
-            "value": "21 days",
-            "type": "String"
-          },
-          "similarity": null
-        },
-        {
-          "a": {
-            "name": "Date of Sentence",
-            "value": " 3.6.1905",
-            "type": "String"
-          },
-          "b": {
-            "name": "Date of Sentence",
-            "value": " 8.6.1906",
-            "type": "String"
-          },
-          "similarity": null
-        },
-        {
-          "a": {
-            "name": "Remarks",
-            "value": null,
-            "type": "String"
-          },
-          "b": {
-            "name": "Remarks",
-            "value": null,
-            "type": "String"
-          },
-          "similarity": null
-        }
-      ],
-      "identifiers": {
-        "a": {
-          "dataset": null,
-          "record": 4
-        },
-        "b": {
-          "dataset": null,
-          "record": 5
-        }
-      }
-    },
-    {
-      "fields": [
-        {
-          "a": {
-            "name": "Station",
-            "value": "Stone St",
-            "type": "String"
-          },
-          "b": {
-            "name": "Station",
-            "value": "Stone St",
-            "type": "String"
-          },
-          "similarity": null
-        },
-        {
-          "a": {
             "name": "Prisoner's Name",
             "value": "John Muller",
             "type": "String"
           },
-          "b": {
-            "name": "Prisoner's Name",
-            "value": "Patrick Dalton",
-            "type": "String"
-          },
           "similarity": null
         },
         {
           "a": {
+            "name": "Age",
+            "value": 33,
+            "type": "String"
+          },
+          "b": {
             "name": "Age",
             "value": 22,
             "type": "String"
           },
-          "b": {
-            "name": "Age",
-            "value": 27,
-            "type": "String"
-          },
           "similarity": null
         },
         {
           "a": {
+            "name": "Occupation",
+            "value": "Maried",
+            "type": "String"
+          },
+          "b": {
             "name": "Occupation",
             "value": "Lab",
             "type": "String"
           },
-          "b": {
-            "name": "Occupation",
-            "value": "thief",
-            "type": "String"
-          },
           "similarity": null
         },
         {
           "a": {
+            "name": "Residence",
+            "value": "1. Blackpitts",
+            "type": "String"
+          },
+          "b": {
             "name": "Residence",
             "value": "22 Basin Lane",
             "type": "String"
           },
-          "b": {
-            "name": "Residence",
-            "value": "none",
-            "type": "String"
-          },
           "similarity": null
         },
         {
           "a": {
+            "name": "Offence",
+            "value": "Larceny clothes",
+            "type": "String"
+          },
+          "b": {
             "name": "Offence",
             "value": "False Pretences",
             "type": "String"
           },
-          "b": {
-            "name": "Offence",
-            "value": "Loitering",
-            "type": "String"
-          },
           "similarity": null
         },
         {
           "a": {
-            "name": "Sentence",
-            "value": "no prison",
-            "type": "String"
-          },
-          "b": {
             "name": "Sentence",
             "value": "21 days",
             "type": "String"
           },
+          "b": {
+            "name": "Sentence",
+            "value": "no prison",
+            "type": "String"
+          },
           "similarity": null
         },
         {
           "a": {
             "name": "Date of Sentence",
-            "value": "17.12.1906",
+            "value": " 8.6.1906",
             "type": "String"
           },
           "b": {
             "name": "Date of Sentence",
-            "value": " 5.10.1905",
+            "value": "17.12.1906",
             "type": "String"
           },
           "similarity": null
@@ -516,12 +385,12 @@
       ],
       "identifiers": {
         "a": {
-          "dataset": null,
-          "record": 6
+          "dataset": "Prison Book",
+          "record": "p145-l19"
         },
         "b": {
-          "dataset": null,
-          "record": 7
+          "dataset": "Prison Book",
+          "record": "p165-l14"
         }
       }
     },
@@ -647,12 +516,12 @@
       ],
       "identifiers": {
         "a": {
-          "dataset": null,
-          "record": 8
+          "dataset": "Prison Book",
+          "record": "p56-l8"
         },
         "b": {
-          "dataset": null,
-          "record": 9
+          "dataset": "Prison Book",
+          "record": "p85-l21"
         }
       }
     },
@@ -661,7 +530,7 @@
         {
           "a": {
             "name": "Station",
-            "value": "B Well",
+            "value": "Stone St",
             "type": "String"
           },
           "b": {
@@ -674,7 +543,7 @@
         {
           "a": {
             "name": "Prisoner's Name",
-            "value": "Patk Cardiff",
+            "value": "Patrick Dalton",
             "type": "String"
           },
           "b": {
@@ -687,7 +556,7 @@
         {
           "a": {
             "name": "Age",
-            "value": 22,
+            "value": 27,
             "type": "String"
           },
           "b": {
@@ -700,7 +569,7 @@
         {
           "a": {
             "name": "Occupation",
-            "value": "none",
+            "value": "thief",
             "type": "String"
           },
           "b": {
@@ -713,7 +582,7 @@
         {
           "a": {
             "name": "Residence",
-            "value": "Larceny Bacon",
+            "value": "none",
             "type": "String"
           },
           "b": {
@@ -726,7 +595,7 @@
         {
           "a": {
             "name": "Offence",
-            "value": "9 months",
+            "value": "Loitering",
             "type": "String"
           },
           "b": {
@@ -739,7 +608,7 @@
         {
           "a": {
             "name": "Sentence",
-            "value": " 6.5.1905",
+            "value": "21 days",
             "type": "String"
           },
           "b": {
@@ -752,7 +621,7 @@
         {
           "a": {
             "name": "Date of Sentence",
-            "value": null,
+            "value": " 5.10.1905",
             "type": "String"
           },
           "b": {
@@ -778,12 +647,12 @@
       ],
       "identifiers": {
         "a": {
-          "dataset": null,
-          "record": 10
+          "dataset": "Prison Book",
+          "record": "p23-l7"
         },
         "b": {
-          "dataset": null,
-          "record": 11
+          "dataset": "Prison Book",
+          "record": "p165-l1"
         }
       }
     }
