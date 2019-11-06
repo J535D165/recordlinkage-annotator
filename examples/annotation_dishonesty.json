@@ -1,0 +1,791 @@
+{
+  "version": 1,
+  "pairs": [
+    {
+      "fields": [
+        {
+          "a": {
+            "name": "Station",
+            "value": "B Well",
+            "type": "String"
+          },
+          "b": {
+            "name": "Station",
+            "value": "Stone St",
+            "type": "String"
+          },
+          "similarity": null
+        },
+        {
+          "a": {
+            "name": "Prisoner's Name",
+            "value": "Charles Reid",
+            "type": "String"
+          },
+          "b": {
+            "name": "Prisoner's Name",
+            "value": "Patrick Dalton",
+            "type": "String"
+          },
+          "similarity": null
+        },
+        {
+          "a": {
+            "name": "Age",
+            "value": 33,
+            "type": "String"
+          },
+          "b": {
+            "name": "Age",
+            "value": 27,
+            "type": "String"
+          },
+          "similarity": null
+        },
+        {
+          "a": {
+            "name": "Occupation",
+            "value": "Sailor",
+            "type": "String"
+          },
+          "b": {
+            "name": "Occupation",
+            "value": "thief",
+            "type": "String"
+          },
+          "similarity": null
+        },
+        {
+          "a": {
+            "name": "Residence",
+            "value": "24 Golden Lane",
+            "type": "String"
+          },
+          "b": {
+            "name": "Residence",
+            "value": "none",
+            "type": "String"
+          },
+          "similarity": null
+        },
+        {
+          "a": {
+            "name": "Offence",
+            "value": "Larceny tools",
+            "type": "String"
+          },
+          "b": {
+            "name": "Offence",
+            "value": "Loitering",
+            "type": "String"
+          },
+          "similarity": null
+        },
+        {
+          "a": {
+            "name": "Sentence",
+            "value": "2 Months",
+            "type": "String"
+          },
+          "b": {
+            "name": "Sentence",
+            "value": "21 days",
+            "type": "String"
+          },
+          "similarity": null
+        },
+        {
+          "a": {
+            "name": "Date of Sentence",
+            "value": "13.5.1905",
+            "type": "String"
+          },
+          "b": {
+            "name": "Date of Sentence",
+            "value": " 5.10.1905",
+            "type": "String"
+          },
+          "similarity": null
+        },
+        {
+          "a": {
+            "name": "Remarks",
+            "value": null,
+            "type": "String"
+          },
+          "b": {
+            "name": "Remarks",
+            "value": null,
+            "type": "String"
+          },
+          "similarity": null
+        }
+      ],
+      "identifiers": {
+        "a": {
+          "dataset": null,
+          "record": 0
+        },
+        "b": {
+          "dataset": null,
+          "record": 1
+        }
+      }
+    },
+    {
+      "fields": [
+        {
+          "a": {
+            "name": "Station",
+            "value": "Stone St",
+            "type": "String"
+          },
+          "b": {
+            "name": "Station",
+            "value": "Stone St",
+            "type": "String"
+          },
+          "similarity": null
+        },
+        {
+          "a": {
+            "name": "Prisoner's Name",
+            "value": "Mary Byrne",
+            "type": "String"
+          },
+          "b": {
+            "name": "Prisoner's Name",
+            "value": "Mary Byre",
+            "type": "String"
+          },
+          "similarity": null
+        },
+        {
+          "a": {
+            "name": "Age",
+            "value": 24,
+            "type": "String"
+          },
+          "b": {
+            "name": "Age",
+            "value": 27,
+            "type": "String"
+          },
+          "similarity": null
+        },
+        {
+          "a": {
+            "name": "Occupation",
+            "value": "none",
+            "type": "String"
+          },
+          "b": {
+            "name": "Occupation",
+            "value": "none",
+            "type": "String"
+          },
+          "similarity": null
+        },
+        {
+          "a": {
+            "name": "Residence",
+            "value": "none",
+            "type": "String"
+          },
+          "b": {
+            "name": "Residence",
+            "value": "none",
+            "type": "String"
+          },
+          "similarity": null
+        },
+        {
+          "a": {
+            "name": "Offence",
+            "value": "Larceny boots",
+            "type": "String"
+          },
+          "b": {
+            "name": "Offence",
+            "value": "Loitering",
+            "type": "String"
+          },
+          "similarity": null
+        },
+        {
+          "a": {
+            "name": "Sentence",
+            "value": "7days",
+            "type": "String"
+          },
+          "b": {
+            "name": "Sentence",
+            "value": "2 month",
+            "type": "String"
+          },
+          "similarity": null
+        },
+        {
+          "a": {
+            "name": "Date of Sentence",
+            "value": " 3.6.1905",
+            "type": "String"
+          },
+          "b": {
+            "name": "Date of Sentence",
+            "value": " 3.6.1907",
+            "type": "String"
+          },
+          "similarity": null
+        },
+        {
+          "a": {
+            "name": "Remarks",
+            "value": null,
+            "type": "String"
+          },
+          "b": {
+            "name": "Remarks",
+            "value": null,
+            "type": "String"
+          },
+          "similarity": null
+        }
+      ],
+      "identifiers": {
+        "a": {
+          "dataset": null,
+          "record": 2
+        },
+        "b": {
+          "dataset": null,
+          "record": 3
+        }
+      }
+    },
+    {
+      "fields": [
+        {
+          "a": {
+            "name": "Station",
+            "value": "Stone St",
+            "type": "String"
+          },
+          "b": {
+            "name": "Station",
+            "value": "C Lane",
+            "type": "String"
+          },
+          "similarity": null
+        },
+        {
+          "a": {
+            "name": "Prisoner's Name",
+            "value": "Mary Byrne",
+            "type": "String"
+          },
+          "b": {
+            "name": "Prisoner's Name",
+            "value": "Charlotte Walche",
+            "type": "String"
+          },
+          "similarity": null
+        },
+        {
+          "a": {
+            "name": "Age",
+            "value": 24,
+            "type": "String"
+          },
+          "b": {
+            "name": "Age",
+            "value": 33,
+            "type": "String"
+          },
+          "similarity": null
+        },
+        {
+          "a": {
+            "name": "Occupation",
+            "value": "none",
+            "type": "String"
+          },
+          "b": {
+            "name": "Occupation",
+            "value": "Maried",
+            "type": "String"
+          },
+          "similarity": null
+        },
+        {
+          "a": {
+            "name": "Residence",
+            "value": "none",
+            "type": "String"
+          },
+          "b": {
+            "name": "Residence",
+            "value": "1. Blackpitts",
+            "type": "String"
+          },
+          "similarity": null
+        },
+        {
+          "a": {
+            "name": "Offence",
+            "value": "Larceny boots",
+            "type": "String"
+          },
+          "b": {
+            "name": "Offence",
+            "value": "Larceny clothes",
+            "type": "String"
+          },
+          "similarity": null
+        },
+        {
+          "a": {
+            "name": "Sentence",
+            "value": "7days",
+            "type": "String"
+          },
+          "b": {
+            "name": "Sentence",
+            "value": "21 days",
+            "type": "String"
+          },
+          "similarity": null
+        },
+        {
+          "a": {
+            "name": "Date of Sentence",
+            "value": " 3.6.1905",
+            "type": "String"
+          },
+          "b": {
+            "name": "Date of Sentence",
+            "value": " 8.6.1906",
+            "type": "String"
+          },
+          "similarity": null
+        },
+        {
+          "a": {
+            "name": "Remarks",
+            "value": null,
+            "type": "String"
+          },
+          "b": {
+            "name": "Remarks",
+            "value": null,
+            "type": "String"
+          },
+          "similarity": null
+        }
+      ],
+      "identifiers": {
+        "a": {
+          "dataset": null,
+          "record": 4
+        },
+        "b": {
+          "dataset": null,
+          "record": 5
+        }
+      }
+    },
+    {
+      "fields": [
+        {
+          "a": {
+            "name": "Station",
+            "value": "Stone St",
+            "type": "String"
+          },
+          "b": {
+            "name": "Station",
+            "value": "Stone St",
+            "type": "String"
+          },
+          "similarity": null
+        },
+        {
+          "a": {
+            "name": "Prisoner's Name",
+            "value": "John Muller",
+            "type": "String"
+          },
+          "b": {
+            "name": "Prisoner's Name",
+            "value": "Patrick Dalton",
+            "type": "String"
+          },
+          "similarity": null
+        },
+        {
+          "a": {
+            "name": "Age",
+            "value": 22,
+            "type": "String"
+          },
+          "b": {
+            "name": "Age",
+            "value": 27,
+            "type": "String"
+          },
+          "similarity": null
+        },
+        {
+          "a": {
+            "name": "Occupation",
+            "value": "Lab",
+            "type": "String"
+          },
+          "b": {
+            "name": "Occupation",
+            "value": "thief",
+            "type": "String"
+          },
+          "similarity": null
+        },
+        {
+          "a": {
+            "name": "Residence",
+            "value": "22 Basin Lane",
+            "type": "String"
+          },
+          "b": {
+            "name": "Residence",
+            "value": "none",
+            "type": "String"
+          },
+          "similarity": null
+        },
+        {
+          "a": {
+            "name": "Offence",
+            "value": "False Pretences",
+            "type": "String"
+          },
+          "b": {
+            "name": "Offence",
+            "value": "Loitering",
+            "type": "String"
+          },
+          "similarity": null
+        },
+        {
+          "a": {
+            "name": "Sentence",
+            "value": "no prison",
+            "type": "String"
+          },
+          "b": {
+            "name": "Sentence",
+            "value": "21 days",
+            "type": "String"
+          },
+          "similarity": null
+        },
+        {
+          "a": {
+            "name": "Date of Sentence",
+            "value": "17.12.1906",
+            "type": "String"
+          },
+          "b": {
+            "name": "Date of Sentence",
+            "value": " 5.10.1905",
+            "type": "String"
+          },
+          "similarity": null
+        },
+        {
+          "a": {
+            "name": "Remarks",
+            "value": null,
+            "type": "String"
+          },
+          "b": {
+            "name": "Remarks",
+            "value": null,
+            "type": "String"
+          },
+          "similarity": null
+        }
+      ],
+      "identifiers": {
+        "a": {
+          "dataset": null,
+          "record": 6
+        },
+        "b": {
+          "dataset": null,
+          "record": 7
+        }
+      }
+    },
+    {
+      "fields": [
+        {
+          "a": {
+            "name": "Station",
+            "value": "B Well",
+            "type": "String"
+          },
+          "b": {
+            "name": "Station",
+            "value": "B Well",
+            "type": "String"
+          },
+          "similarity": null
+        },
+        {
+          "a": {
+            "name": "Prisoner's Name",
+            "value": "Patk Cardiff",
+            "type": "String"
+          },
+          "b": {
+            "name": "Prisoner's Name",
+            "value": "Patk Cardiff",
+            "type": "String"
+          },
+          "similarity": null
+        },
+        {
+          "a": {
+            "name": "Age",
+            "value": 53,
+            "type": "String"
+          },
+          "b": {
+            "name": "Age",
+            "value": 22,
+            "type": "String"
+          },
+          "similarity": null
+        },
+        {
+          "a": {
+            "name": "Occupation",
+            "value": "24 Ash St",
+            "type": "String"
+          },
+          "b": {
+            "name": "Occupation",
+            "value": "none",
+            "type": "String"
+          },
+          "similarity": null
+        },
+        {
+          "a": {
+            "name": "Residence",
+            "value": "Larceny Bacon",
+            "type": "String"
+          },
+          "b": {
+            "name": "Residence",
+            "value": "Larceny Bacon",
+            "type": "String"
+          },
+          "similarity": null
+        },
+        {
+          "a": {
+            "name": "Offence",
+            "value": "15 months",
+            "type": "String"
+          },
+          "b": {
+            "name": "Offence",
+            "value": "9 months",
+            "type": "String"
+          },
+          "similarity": null
+        },
+        {
+          "a": {
+            "name": "Sentence",
+            "value": " 6.5.1905",
+            "type": "String"
+          },
+          "b": {
+            "name": "Sentence",
+            "value": " 6.5.1905",
+            "type": "String"
+          },
+          "similarity": null
+        },
+        {
+          "a": {
+            "name": "Date of Sentence",
+            "value": null,
+            "type": "String"
+          },
+          "b": {
+            "name": "Date of Sentence",
+            "value": null,
+            "type": "String"
+          },
+          "similarity": null
+        },
+        {
+          "a": {
+            "name": "Remarks",
+            "value": null,
+            "type": "String"
+          },
+          "b": {
+            "name": "Remarks",
+            "value": null,
+            "type": "String"
+          },
+          "similarity": null
+        }
+      ],
+      "identifiers": {
+        "a": {
+          "dataset": null,
+          "record": 8
+        },
+        "b": {
+          "dataset": null,
+          "record": 9
+        }
+      }
+    },
+    {
+      "fields": [
+        {
+          "a": {
+            "name": "Station",
+            "value": "B Well",
+            "type": "String"
+          },
+          "b": {
+            "name": "Station",
+            "value": "Stone St",
+            "type": "String"
+          },
+          "similarity": null
+        },
+        {
+          "a": {
+            "name": "Prisoner's Name",
+            "value": "Patk Cardiff",
+            "type": "String"
+          },
+          "b": {
+            "name": "Prisoner's Name",
+            "value": "Mary Byre",
+            "type": "String"
+          },
+          "similarity": null
+        },
+        {
+          "a": {
+            "name": "Age",
+            "value": 22,
+            "type": "String"
+          },
+          "b": {
+            "name": "Age",
+            "value": 27,
+            "type": "String"
+          },
+          "similarity": null
+        },
+        {
+          "a": {
+            "name": "Occupation",
+            "value": "none",
+            "type": "String"
+          },
+          "b": {
+            "name": "Occupation",
+            "value": "none",
+            "type": "String"
+          },
+          "similarity": null
+        },
+        {
+          "a": {
+            "name": "Residence",
+            "value": "Larceny Bacon",
+            "type": "String"
+          },
+          "b": {
+            "name": "Residence",
+            "value": "none",
+            "type": "String"
+          },
+          "similarity": null
+        },
+        {
+          "a": {
+            "name": "Offence",
+            "value": "9 months",
+            "type": "String"
+          },
+          "b": {
+            "name": "Offence",
+            "value": "Loitering",
+            "type": "String"
+          },
+          "similarity": null
+        },
+        {
+          "a": {
+            "name": "Sentence",
+            "value": " 6.5.1905",
+            "type": "String"
+          },
+          "b": {
+            "name": "Sentence",
+            "value": "2 month",
+            "type": "String"
+          },
+          "similarity": null
+        },
+        {
+          "a": {
+            "name": "Date of Sentence",
+            "value": null,
+            "type": "String"
+          },
+          "b": {
+            "name": "Date of Sentence",
+            "value": " 3.6.1907",
+            "type": "String"
+          },
+          "similarity": null
+        },
+        {
+          "a": {
+            "name": "Remarks",
+            "value": null,
+            "type": "String"
+          },
+          "b": {
+            "name": "Remarks",
+            "value": null,
+            "type": "String"
+          },
+          "similarity": null
+        }
+      ],
+      "identifiers": {
+        "a": {
+          "dataset": null,
+          "record": 10
+        },
+        "b": {
+          "dataset": null,
+          "record": 11
+        }
+      }
+    }
+  ]
+}
