@@ -1,6 +1,4 @@
-# RecordLinkage ANNOTATOR
-
-Work in progress.
+# RecordLinkage ANNOTATOR :bangbang: WORK IN PROGRESS :bangbang:
 
 *RecordLinkage ANNOTATOR* is a browser-based user interface for
 manual labeling of record pairs. Manual labeled or annotated data is useful 
@@ -9,11 +7,13 @@ for training and validation models. The application provides the annotator a cle
 
 :arrow_right: :arrow_right: Check out the [hosted version of *RecordLinkage ANNOTATOR*](https://j535d165.github.io/recordlinkage-annotator/) :arrow_left: :arrow_left:
 
+Want to give it a try? Download our [**Prison book**](https://raw.githubusercontent.com/J535D165/recordlinkage-annotator/master/examples/annotation_dishonesty.json) example file :cop: :suspect:
+
+[![Review screen of RecordLinkage ANNOTATOR](images/annotator_review.png)](https://j535d165.github.io/recordlinkage-annotator/)
+
 The hosted version of [*RecordLinkage ANNOTATOR*](https://j535d165.github.io/recordlinkage-annotator/) on [Github-pages](https://pages.github.com/) makes use of client-side Javascript 
 only. The tool doesn't upload data. Not convinced about the safety of your data? That's 
 fine. You can deploy the code yourself locally. Please read the [Development](#development) instructions.  
-
-[![Review screen of RecordLinkage ANNOTATOR](images/annotator_review.png)](https://j535d165.github.io/recordlinkage-annotator/)
 
 ## Create annotation file
 
