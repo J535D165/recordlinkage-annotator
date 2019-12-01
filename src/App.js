@@ -68,7 +68,7 @@ export default function App() {
       <Container maxWidth="md" fixed>
 
 
-        <Typography component="div" style={{ paddingTop: '50px', height: '100vh' }}>
+        <Typography component="div" style={{ paddingTop: '50px' }}>
 
           {isState === 'upload' &&
             <React.Fragment>
