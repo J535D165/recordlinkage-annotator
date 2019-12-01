@@ -14,16 +14,7 @@ import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
 import {createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import blueGrey from '@material-ui/core/colors/blueGrey';
-
-const theme = createMuiTheme({
-  palette: {
-    primary: blueGrey,
-    type:'light',
-    secondary: {
-      main: '#f44336',
-    },
-  },
-});
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 // favicon: https://favicon.io/favicon-generator/?t=RL&ff=Kreon&fs=80&fc=%23FFFFFF&b=rounded&bc=%2337474f
 
@@ -45,6 +36,22 @@ export default function App() {
   const reviewState = (state) => {
     setIsState(state);
   };
+
+  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
+
+  const theme = React.useMemo(
+    () =>
+      createMuiTheme({
+        palette: {
+          primary: blueGrey,
+          type: prefersDarkMode ? 'dark' : 'light',
+          secondary: {
+            main: '#f44336',
+          },
+        },
+      }),
+    [prefersDarkMode],
+  );
 
   return (
     <React.Fragment>
