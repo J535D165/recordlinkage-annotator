@@ -1,4 +1,4 @@
-# RecordLinkage ANNOTATOR :bangbang: WORK IN PROGRESS :bangbang:
+# RecordLinkage ANNOTATOR
 
 *RecordLinkage ANNOTATOR* is a browser-based user interface for
 manual labeling of record pairs. Manual labeled or annotated data is useful 
