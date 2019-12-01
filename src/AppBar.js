@@ -6,7 +6,10 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
 import SaveAltIcon from '@material-ui/icons/SaveAlt';
+import Brightness4Icon from '@material-ui/icons/Brightness4';
+
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -42,6 +45,10 @@ export default function ButtonAppBar(props) {
           	Export
           </Button>
       	}
+
+        <IconButton color="default" onClick={props.onToggleDark}>
+          <Brightness4Icon/>
+        </IconButton>
 
         </Toolbar>
 

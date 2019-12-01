@@ -39,24 +39,31 @@ export default function App() {
 
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
 
-  const theme = React.useMemo(
-    () =>
-      createMuiTheme({
-        palette: {
-          primary: blueGrey,
-          type: prefersDarkMode ? 'dark' : 'light',
-          secondary: {
-            main: '#f44336',
-          },
-        },
-      }),
-    [prefersDarkMode],
-  );
+  const [theme, setTheme] = useState({
+    palette: {
+      primary: blueGrey,
+      type: prefersDarkMode ? 'light' : 'dark', // strange. prefersDarkmode returns first the opposite
+    }
+  });
+
+  // we change the palette type of the theme in state
+  const toggleDarkTheme = () => {
+    let newPaletteType = theme.palette.type === "light" ? "dark" : "light";
+    setTheme({
+      palette: {
+        primary: blueGrey,
+        type: newPaletteType,
+      }
+    });
+  };
+
+  // we generate a MUI-theme from state's theme object
+  const muiTheme = createMuiTheme(theme);
 
   return (
     <React.Fragment>
-      <ThemeProvider theme={theme}>
-      <ButtonAppBar reviewState={isState}/>
+      <ThemeProvider theme={muiTheme}>
+      <ButtonAppBar reviewState={isState} onToggleDark={toggleDarkTheme}/>
       <CssBaseline />
       <Container maxWidth="md" fixed>
 
