@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/recordlinkage-annotator/static/css/main.b100e6da.chunk.css",
+    "main.js": "/recordlinkage-annotator/static/js/main.f5c668ea.chunk.js",
+    "main.js.map": "/recordlinkage-annotator/static/js/main.f5c668ea.chunk.js.map",
+    "runtime-main.js": "/recordlinkage-annotator/static/js/runtime-main.30e9f822.js",
+    "runtime-main.js.map": "/recordlinkage-annotator/static/js/runtime-main.30e9f822.js.map",
+    "static/css/2.1db10f6a.chunk.css": "/recordlinkage-annotator/static/css/2.1db10f6a.chunk.css",
+    "static/js/2.62410cf8.chunk.js": "/recordlinkage-annotator/static/js/2.62410cf8.chunk.js",
+    "static/js/2.62410cf8.chunk.js.map": "/recordlinkage-annotator/static/js/2.62410cf8.chunk.js.map",
+    "index.html": "/recordlinkage-annotator/index.html",
+    "precache-manifest.544caf7664b30378d0b64cdfc981a032.js": "/recordlinkage-annotator/precache-manifest.544caf7664b30378d0b64cdfc981a032.js",
+    "service-worker.js": "/recordlinkage-annotator/service-worker.js",
+    "static/css/2.1db10f6a.chunk.css.map": "/recordlinkage-annotator/static/css/2.1db10f6a.chunk.css.map",
+    "static/css/main.b100e6da.chunk.css.map": "/recordlinkage-annotator/static/css/main.b100e6da.chunk.css.map",
+    "static/media/index.css": "/recordlinkage-annotator/static/media/roboto-latin-900italic.ebf6d164.woff2"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.30e9f822.js",
+    "static/css/2.1db10f6a.chunk.css",
+    "static/js/2.62410cf8.chunk.js",
+    "static/css/main.b100e6da.chunk.css",
+    "static/js/main.f5c668ea.chunk.js"
+  ]
+}
