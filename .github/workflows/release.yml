@@ -27,7 +27,7 @@ jobs:
           yarn build
       - name: Package project
         run: |
-          zip --junk-paths build README.md
+          zip build.zip -r build README.md
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1.0.0
