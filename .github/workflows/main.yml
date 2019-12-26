@@ -1,5 +1,7 @@
-name: Build and Deploy
+name: Build and Test
+
 on:
+  pull_request:
   push:
     branches:
       - master
@@ -21,17 +23,3 @@ jobs:
           yarn test
         env:
           CI: true
-
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@master
-
-      - name: Build and Deploy
-        uses: JamesIves/github-pages-deploy-action@master
-        env:
-          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: build
-          BUILD_SCRIPT: yarn && yarn build
