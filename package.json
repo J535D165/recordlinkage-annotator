@@ -1,6 +1,6 @@
 {
   "name": "recordlinkage-annotator",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "private": true,
   "homepage": "https://J535D165.github.io/recordlinkage-annotator",
   "dependencies": {
