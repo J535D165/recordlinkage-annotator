@@ -18,10 +18,16 @@ export default function ButtonsClassifier(props) {
   return (
     <div className={classes.center}>
       <Button variant="contained" color="primary" className={classes.button} onClick={props.isMatch}>
-        Match
+        Match (1)
+      </Button>
+      <Button variant="contained" color="default" className={classes.button} onClick={props.isUnknown}>
+        Unknown (2)
       </Button>
       <Button variant="contained" color="secondary" className={classes.button} onClick={props.isDistinct}>
-        Distinct
+        Distinct (3)
+      </Button>
+      <Button variant="contained" color="default" className={classes.button} onClick={props.skipRecord}>
+        Skip (s)
       </Button>
     </div>
   );

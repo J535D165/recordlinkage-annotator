@@ -42,6 +42,23 @@ export default function ReviewZone(props) {
     return({'matchCount': matchCount, 'distinctCount': distinctCount})
   }
 
+  const handleKeyPress = (e) => {
+    // console.log("Event fired!");
+    // console.log(e.key);
+    if (e.key === '1') { 
+      isMatch();
+    }
+    if (e.key === '2') { 
+      isUnknown();
+    }
+    if (e.key === '3') { 
+      isDistinct();
+    }
+    if (e.key === 's') { 
+      skipRecord();
+    }
+  };
+
   const onClick = () => {
     if (pairIndex < appData['pairs'].length - 1) {
       setPairIndex(pairIndex + 1);
@@ -50,7 +67,7 @@ export default function ReviewZone(props) {
       console.log(getStats())
       props.reviewState("export");
     } 
-  }
+  };
 
   const isMatch = () => {
     console.log("Records match");
@@ -68,8 +85,21 @@ export default function ReviewZone(props) {
     onClick();
   };
 
+  const isUnknown = () => {
+    console.log("Records are unknown");
+    delete appData['pairs'][pairIndex].label;
+    delete appData['pairs'][pairIndex].label_str;
+
+    onClick();
+  };
+
+  const skipRecord = () => {
+    console.log("Skipping record");
+    onClick();
+  };
+
   return (
-    <div className={classes.root}>
+    <div className={classes.root} tabIndex={-1} onKeyDown={handleKeyPress}>
       <Grid container spacing={1}>
         
         <Grid item xs={12} sm={6}>
@@ -82,7 +112,7 @@ export default function ReviewZone(props) {
 
         {/* grid item for buttons at the bottom (or top))*/}
         <Grid item xs={12} sm={6}>
-          <ButtonsClassifier isMatch={isMatch}  isDistinct={isDistinct}/>
+          <ButtonsClassifier isMatch={isMatch} isDistinct={isDistinct} isUnknown={isUnknown} skipRecord={skipRecord}/>
         </Grid>
 
       </Grid>
