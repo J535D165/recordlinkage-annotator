@@ -54,18 +54,37 @@ export default function ReviewZone(props) {
     if (e.key === '3') { 
       isDistinct();
     }
-    if (e.key === 's') { 
+    if (e.key === ' ') { 
       skipRecord();
     }
+    if (e.key === 'ArrowRight') { 
+      navigateTo("nextLoop");
+    }
+    if (e.key === 'ArrowUp') { 
+      navigateTo('first');
+    }
+    if (e.key === 'ArrowDown') { 
+      navigateTo('last');
+    }
+    if (e.key === 'ArrowLeft') { 
+      navigateTo('previousLoop');
+    }
+    if (e.key === 's') { 
+      saveJSON();
+    }
   };
+
+  const saveJSON = () => {
+    console.log("Saving JSON:")
+    console.log(getStats())
+    props.reviewState("export");
+  }
 
   const onClick = () => {
     if (pairIndex < appData['pairs'].length - 1) {
       setPairIndex(pairIndex + 1);
     } else {
-      console.log("Last record, we are done.")
-      console.log(getStats())
-      props.reviewState("export");
+      saveJSON();
     } 
   };
 
@@ -94,9 +113,47 @@ export default function ReviewZone(props) {
   };
 
   const skipRecord = () => {
-    console.log("Skipping record");
+    console.log("Skipping record pair");
     onClick();
   };
+
+  const navigateTo = (direction) => {
+    console.log(`Navigation event! ${direction}`);
+    switch (direction) {
+      case "first":
+        setPairIndex(0);
+        break;
+      case "previous":
+        if (pairIndex > 0) {
+          setPairIndex(pairIndex - 1);
+        }
+        break;
+      case "previousLoop":
+        if (pairIndex > 0) {
+          setPairIndex(pairIndex - 1);
+        } else {
+          setPairIndex(appData['pairs'].length - 1);
+        }
+        break;
+      case "next":
+        if (pairIndex < appData['pairs'].length - 1) {
+          setPairIndex(pairIndex + 1);
+        }    
+        break;
+      case "nextLoop":
+        if (pairIndex < appData['pairs'].length - 1) {
+          setPairIndex(pairIndex + 1);
+        } else {
+          setPairIndex(0);
+        }
+        break;
+      case "last":
+        setPairIndex(appData['pairs'].length - 1);
+        break;
+      default:
+        throw new Error("unknown direction in navigateTo");
+    }
+  }
 
   return (
     <div className={classes.root} tabIndex={-1} onKeyDown={handleKeyPress}>
@@ -112,7 +169,7 @@ export default function ReviewZone(props) {
 
         {/* grid item for buttons at the bottom (or top))*/}
         <Grid item xs={12} sm={6}>
-          <ButtonsClassifier isMatch={isMatch} isDistinct={isDistinct} isUnknown={isUnknown} skipRecord={skipRecord}/>
+          <ButtonsClassifier isMatch={isMatch} isDistinct={isDistinct} isUnknown={isUnknown} skipRecord={skipRecord} navigateCallback={navigateTo}/>
         </Grid>
 
       </Grid>
