@@ -63,7 +63,7 @@ export default function App() {
   return (
     <React.Fragment>
       <ThemeProvider theme={muiTheme}>
-      <ButtonAppBar reviewState={isState} onToggleDark={toggleDarkTheme}/>
+        <ButtonAppBar reviewState={isState} onToggleDark={toggleDarkTheme} reviewData={appData}/>
       <CssBaseline />
       <Container maxWidth="md" fixed>
 

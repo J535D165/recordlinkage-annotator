@@ -1,14 +1,16 @@
 import React from 'react';
 import 'typeface-roboto';
 
+import ExportData from './ExportData.js'
+
 import Link from "@material-ui/core/Link";
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
+// import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
-import SaveAltIcon from '@material-ui/icons/SaveAlt';
+// import SaveAltIcon from '@material-ui/icons/SaveAlt';
 import Brightness4Icon from '@material-ui/icons/Brightness4';
 
 
@@ -40,11 +42,9 @@ export default function ButtonAppBar(props) {
             <Link href="/" variant="inherit" color="inherit">RecordLinkage ANNOTATOR</Link>
           </Typography>
 
-          {props.reviewState === "never" &&
-          <Button color="inherit">
-          	<SaveAltIcon className={classes.extendedIcon} />
-          	Export
-          </Button>
+          {
+          props.reviewState === "review" &&
+            <ExportData reviewData={props.reviewData}/>
       	}
 
         <IconButton color="default" onClick={props.onToggleDark}>

@@ -39,16 +39,16 @@ export default function ButtonsClassifier(props) {
         Skip (spacebar)
       </Button>
 
-      <IconButton color="default" className={classes.buttonNav} onClick={() => props.navigateCallback("first")}>
+      <IconButton color="default" variant="outlined" className={classes.buttonNav} onClick={() => props.navigateCallback("first")}>
         <SkipPreviousIcon />
       </IconButton>
-      <IconButton color="default" className={classes.buttonNav} onClick={() => props.navigateCallback("previous")}>
+      <IconButton color="default" variant="outlined" className={classes.buttonNav} onClick={() => props.navigateCallback("previous")}>
         <ArrowBackIcon />
       </IconButton>
-      <IconButton color="default" className={classes.buttonNav} onClick={() => props.navigateCallback("next")}>
+      <IconButton color="default" variant="outlined" className={classes.buttonNav} onClick={() => props.navigateCallback("next")}>
         <ArrowForwardIcon />
       </IconButton>
-      <IconButton color="default" className={classes.buttonNav} onClick={() => props.navigateCallback("last")}>
+      <IconButton color="default" variant="outlined" className={classes.buttonNav} onClick={() => props.navigateCallback("last")}>
         <SkipNextIcon />
       </IconButton>
 
