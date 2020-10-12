@@ -7,6 +7,9 @@ import Record from './Record.js'
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -60,6 +63,7 @@ export default function ReviewZone(props) {
 
   const isMatch = () => {
     console.log("Records match");
+    toast("Records match");
     appData['pairs'][pairIndex].label = 1;
     appData['pairs'][pairIndex].label_str = "Match";
 
@@ -68,6 +72,7 @@ export default function ReviewZone(props) {
 
   const isDistinct = () => {
     console.log("Records are distinct");
+    toast("Records are distinct");
     appData['pairs'][pairIndex].label = 0;
     appData['pairs'][pairIndex].label_str = "Distinct";
 
@@ -76,6 +81,7 @@ export default function ReviewZone(props) {
 
   const isUnknown = () => {
     console.log("Records are unknown");
+    toast("Records are unknown");
     delete appData['pairs'][pairIndex].label;
     delete appData['pairs'][pairIndex].label_str;
 
@@ -84,6 +90,7 @@ export default function ReviewZone(props) {
 
   const skipRecord = () => {
     console.log("Skipping record pair");
+    toast("Skipping record pair");
     nextOrSave();
   };
 

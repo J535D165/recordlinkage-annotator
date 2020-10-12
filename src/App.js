@@ -16,6 +16,11 @@ import {createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import blueGrey from '@material-ui/core/colors/blueGrey';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 // favicon: https://favicon.io/favicon-generator/?t=RL&ff=Kreon&fs=80&fc=%23FFFFFF&b=rounded&bc=%2337474f
 
 
@@ -101,7 +106,17 @@ export default function App() {
           }
 
         </Typography>
-        
+          <ToastContainer
+            position="bottom-right"
+            autoClose={5000}
+            hideProgressBar
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+          />
       </Container>
       </ThemeProvider>
     </React.Fragment>
