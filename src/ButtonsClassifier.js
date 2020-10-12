@@ -9,6 +9,7 @@ import SkipPreviousIcon from '@material-ui/icons/SkipPrevious';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import SkipNextIcon from '@material-ui/icons/SkipNext';
+import SaveAltIcon from '@material-ui/icons/SaveAlt';
 
 const useStyles = makeStyles(theme => ({
   button: {
@@ -54,6 +55,9 @@ export default function ButtonsClassifier(props) {
       </IconButton>
       <IconButton color="default" variant="outlined" className={classes.buttonNav} onClick={() => handleAction("last")}>
         <SkipNextIcon />
+      </IconButton>
+      <IconButton color="default" variant="outlined" className={classes.buttonNav} onClick={() => handleAction("save")}>
+        <SaveAltIcon />
       </IconButton>
 
     </div>

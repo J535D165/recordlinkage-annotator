@@ -19,7 +19,7 @@ export default function ExportData(props) {
 
   return (
 
-          <Button color="secondary" href={exportUri()} download='result.json' >
+          <Button color="default" href={exportUri()} download='result.json' >
             <SaveAltIcon />
             Export
           </Button>
