@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import 'typeface-roboto';
+import Paper from '@material-ui/core/Paper';
+import Typography from '@material-ui/core/Typography';
 
 import ButtonsClassifier from './ButtonsClassifier.js'
 import Record from './Record.js'
@@ -10,11 +12,33 @@ import Grid from '@material-ui/core/Grid';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+import ValueBox from './ValueBox'
+
 
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
   },
+  paper: {
+    padding: theme.spacing(2),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+  },
+  statusText: {
+    textAlign: 'center'
+  },
+  statusTextValue: {
+    textAlign: 'center'
+  },
+  textMatch: {
+    color: theme.palette.success.main
+  },
+  textDistinct: {
+    color: theme.palette.secondary.main
+  },
+  textUnknown: {
+    color: theme.palette.primary.main
+  }
 }));
 
 
@@ -95,7 +119,7 @@ export default function ReviewZone(props) {
   };
 
   const navigateTo = (direction) => {
-    console.log(`Navigation event! ${direction}`);
+    // console.log(`Navigation event! ${direction}`);
     switch (direction) {
       case "first":
         setPairIndex(0);
@@ -177,6 +201,25 @@ export default function ReviewZone(props) {
     }
   };
 
+  const getLabelDisplayProperties = (label) => {
+    switch (label) {
+      case 0:
+        return ({
+          "description": "distinct",
+          "class": "textDistinct"
+        });
+      case 1:
+        return ({
+          "description": "match",
+          "class": "textMatch"
+        });
+      default:
+        return ({
+          "description": "unknown",
+          "class": "textUnknown"
+        });
+    }
+  }
 
   return (
     <div className={classes.root} tabIndex={-1} onKeyDown={handleKeyPress}>
@@ -190,9 +233,47 @@ export default function ReviewZone(props) {
         </Grid>
 
 
+        {/* Current value*/}
+        <Grid item xs={12} sm={12}>
+          <Typography color="textPrimary" className={classes.statusText}>
+            This pair is
+          </Typography>
+          <Typography variant="h5" style={{textAlign: "center"}} className={classes[getLabelDisplayProperties(appData['pairs'][pairIndex].label).class]}>
+            {
+              getLabelDisplayProperties(appData['pairs'][pairIndex].label).description
+            }
+          </Typography>
+        </Grid>
+
         {/* grid item for buttons at the bottom (or top))*/}
         <Grid item xs={12} sm={12}>
           <ButtonsClassifier actions={dictActions} />
+        </Grid>
+
+        {/* Summary */}
+        <Grid item xs={12} sm={12}>
+          <Paper className={classes.paper}>
+            <Grid container spacing={1}>
+              <Grid item xs={12} sm={3}>
+                <ValueBox label="Current pair" value={`${pairIndex + 1}/${appData['pairs'].length}`} />
+              </Grid>
+              <Grid item xs={12} sm={3}>
+                <ValueBox label="Matches"
+                  value={appData['pairs'].filter(item => item.label === 1).length}
+                />
+              </Grid>
+              <Grid item xs={12} sm={3}>
+                <ValueBox label="Distinct"
+                  value={appData['pairs'].filter(item => item.label === 0).length}
+                />
+              </Grid>
+              <Grid item xs={12} sm={3}>
+                <ValueBox label="To process"
+                  value={appData['pairs'].filter(item => item.label !== 0 && item.label !== 1).length}
+                />
+              </Grid>
+            </Grid>
+          </Paper>
         </Grid>
 
       </Grid>
