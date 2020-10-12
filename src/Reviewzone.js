@@ -1,4 +1,4 @@
-import React, {useState } from 'react';
+import React, { useState } from 'react';
 import 'typeface-roboto';
 
 import ButtonsClassifier from './ButtonsClassifier.js'
@@ -22,15 +22,15 @@ export default function ReviewZone(props) {
   const [pairIndex, setPairIndex] = useState(0);
 
   // Declare a new state contant for the index
-  const [appData, ] = useState(props.reviewData);
-  
+  const [appData,] = useState(props.reviewData);
+
 
   const getStats = () => {
 
     var matchCount = 0;
     var distinctCount = 0;
 
-    for (var rec in appData['pairs']){
+    for (var rec in appData['pairs']) {
       if (appData['pairs'][rec].label === 1) {
         matchCount = matchCount + 1;
       }
@@ -39,40 +39,10 @@ export default function ReviewZone(props) {
       }
     }
 
-    return({'matchCount': matchCount, 'distinctCount': distinctCount})
+    return ({ 'matchCount': matchCount, 'distinctCount': distinctCount })
   }
 
-  const handleKeyPress = (e) => {
-    // console.log("Event fired!");
-    // console.log(e.key);
-    if (e.key === '1') { 
-      isMatch();
-    }
-    if (e.key === '2') { 
-      isUnknown();
-    }
-    if (e.key === '3') { 
-      isDistinct();
-    }
-    if (e.key === ' ') { 
-      skipRecord();
-    }
-    if (e.key === 'ArrowRight') { 
-      navigateTo("nextLoop");
-    }
-    if (e.key === 'ArrowUp') { 
-      navigateTo('first');
-    }
-    if (e.key === 'ArrowDown') { 
-      navigateTo('last');
-    }
-    if (e.key === 'ArrowLeft') { 
-      navigateTo('previousLoop');
-    }
-    if (e.key === 's') { 
-      saveJSON();
-    }
-  };
+  // Define all actions
 
   const saveJSON = () => {
     console.log("Saving JSON:")
@@ -80,20 +50,20 @@ export default function ReviewZone(props) {
     props.reviewState("export");
   }
 
-  const onClick = () => {
+  const nextOrSave = () => {
     if (pairIndex < appData['pairs'].length - 1) {
       setPairIndex(pairIndex + 1);
     } else {
       saveJSON();
-    } 
+    }
   };
 
   const isMatch = () => {
     console.log("Records match");
     appData['pairs'][pairIndex].label = 1;
-    appData['pairs'][pairIndex].label_str = "Match"; 
-    
-    onClick();
+    appData['pairs'][pairIndex].label_str = "Match";
+
+    nextOrSave();
   };
 
   const isDistinct = () => {
@@ -101,7 +71,7 @@ export default function ReviewZone(props) {
     appData['pairs'][pairIndex].label = 0;
     appData['pairs'][pairIndex].label_str = "Distinct";
 
-    onClick();
+    nextOrSave();
   };
 
   const isUnknown = () => {
@@ -109,12 +79,12 @@ export default function ReviewZone(props) {
     delete appData['pairs'][pairIndex].label;
     delete appData['pairs'][pairIndex].label_str;
 
-    onClick();
+    nextOrSave();
   };
 
   const skipRecord = () => {
     console.log("Skipping record pair");
-    onClick();
+    nextOrSave();
   };
 
   const navigateTo = (direction) => {
@@ -138,7 +108,7 @@ export default function ReviewZone(props) {
       case "next":
         if (pairIndex < appData['pairs'].length - 1) {
           setPairIndex(pairIndex + 1);
-        }    
+        }
         break;
       case "nextLoop":
         if (pairIndex < appData['pairs'].length - 1) {
@@ -155,21 +125,63 @@ export default function ReviewZone(props) {
     }
   }
 
+  // Dictionary of callbacks
+
+  const dictActions = {
+    "match": isMatch,
+    "distinct": isDistinct,
+    "unknown": isUnknown,
+    "first": () => navigateTo("first"),
+    "previous": () => navigateTo("previous"),
+    "previousLoop": () => navigateTo("previousLoop"),
+    "next": () => navigateTo("next"),
+    "nextLoop": () => navigateTo("nextLoop"),
+    "last": () => navigateTo("last"),
+    "skip": skipRecord
+  };
+
+
+  // Key to action mapping
+
+  const handleKeyPress = (e) => {
+    // console.log("Key pressed: " + e.key);
+
+    const dictKeys = {
+      "1": "match",
+      "2": "unknown",
+      "3": "distinct",
+      " ": "skip",
+      "ArrowRight": "nextLoop",
+      "ArrowUp": "first",
+      "ArrowDown": "last",
+      "ArrowLeft": "previousLoop",
+      "s": "save"
+    };
+
+    if (dictKeys.hasOwnProperty(e.key) && dictActions.hasOwnProperty(dictKeys[e.key])) {
+      dictActions[dictKeys[e.key]]();
+      e.preventDefault();
+    } else {
+      console.log("No action defined for this key.")
+    }
+  };
+
+
   return (
     <div className={classes.root} tabIndex={-1} onKeyDown={handleKeyPress}>
       <Grid container spacing={1}>
-        
+
         <Grid item xs={12} sm={6}>
-          <Record recordData={appData['pairs'][pairIndex]} recordSource="a"/>
+          <Record recordData={appData['pairs'][pairIndex]} recordSource="a" />
         </Grid>
         <Grid item xs={12} sm={6}>
-          <Record recordData={appData['pairs'][pairIndex]} recordSource="b"/>
-        </Grid>     
+          <Record recordData={appData['pairs'][pairIndex]} recordSource="b" />
+        </Grid>
 
 
         {/* grid item for buttons at the bottom (or top))*/}
-        <Grid item xs={12} sm={6}>
-          <ButtonsClassifier isMatch={isMatch} isDistinct={isDistinct} isUnknown={isUnknown} skipRecord={skipRecord} navigateCallback={navigateTo}/>
+        <Grid item xs={12} sm={12}>
+          <ButtonsClassifier actions={dictActions} />
         </Grid>
 
       </Grid>
