@@ -17,7 +17,7 @@ import blueGrey from '@material-ui/core/colors/blueGrey';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, cssTransition } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
@@ -65,6 +65,16 @@ export default function App() {
   // we generate a MUI-theme from state's theme object
   const muiTheme = createMuiTheme(theme);
 
+  // Toast transition
+  const toastTransitionCustom = cssTransition({
+    enter: 'zoomIn',
+    exit: 'zoomOut',
+    duration: 200,
+    appendPosition: false,
+    collapse: true,
+    collapseDuration: 200
+  });
+
   return (
     <React.Fragment>
       <ThemeProvider theme={muiTheme}>
@@ -108,7 +118,7 @@ export default function App() {
         </Typography>
           <ToastContainer
             position="bottom-right"
-            autoClose={5000}
+            autoClose={1000}
             hideProgressBar
             newestOnTop={false}
             closeOnClick
@@ -116,6 +126,7 @@ export default function App() {
             pauseOnFocusLoss
             draggable
             pauseOnHover
+            transition={toastTransitionCustom}
           />
       </Container>
       </ThemeProvider>

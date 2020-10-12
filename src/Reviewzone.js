@@ -63,7 +63,7 @@ export default function ReviewZone(props) {
 
   const isMatch = () => {
     console.log("Records match");
-    toast("Records match");
+    toast.success("Records match");
     appData['pairs'][pairIndex].label = 1;
     appData['pairs'][pairIndex].label_str = "Match";
 
@@ -72,7 +72,7 @@ export default function ReviewZone(props) {
 
   const isDistinct = () => {
     console.log("Records are distinct");
-    toast("Records are distinct");
+    toast.dark("Records are distinct");
     appData['pairs'][pairIndex].label = 0;
     appData['pairs'][pairIndex].label_str = "Distinct";
 
@@ -81,7 +81,7 @@ export default function ReviewZone(props) {
 
   const isUnknown = () => {
     console.log("Records are unknown");
-    toast("Records are unknown");
+    toast.info("Records are unknown");
     delete appData['pairs'][pairIndex].label;
     delete appData['pairs'][pairIndex].label_str;
 
@@ -99,6 +99,7 @@ export default function ReviewZone(props) {
     switch (direction) {
       case "first":
         setPairIndex(0);
+        toast("First record pair");
         break;
       case "previous":
         if (pairIndex > 0) {
@@ -109,6 +110,7 @@ export default function ReviewZone(props) {
         if (pairIndex > 0) {
           setPairIndex(pairIndex - 1);
         } else {
+          toast("Reached start, looping from the end.");
           setPairIndex(appData['pairs'].length - 1);
         }
         break;
@@ -121,11 +123,13 @@ export default function ReviewZone(props) {
         if (pairIndex < appData['pairs'].length - 1) {
           setPairIndex(pairIndex + 1);
         } else {
+          toast("Reached end, looping from the start.");
           setPairIndex(0);
         }
         break;
       case "last":
         setPairIndex(appData['pairs'].length - 1);
+        toast("Last record pair");
         break;
       default:
         throw new Error("unknown direction in navigateTo");
